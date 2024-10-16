@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@font-face {
+    font-family: MonumentExtended-Regular;
+    
+    src: url("MonumentExtended-Regular.otf") format("opentype");
+}
+*{
+  color: white;
+  font-family:'Open Sans',sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #343541;
+  display: flex;
+}
+h1{
+  font-family: "MonumentExtended-Regular";
+  letter-spacing: 3px;
+  font-size: 33px;
+  font-weight: 600;
+  padding: 200px 0;
+}
+.side-bar{
+    text-align: center;
+  background-color: #202123;
+  width:200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  text-align: center;
+    width:100%;
+}
+.bottom-section{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+  color: rgba(255,255,255,0.5);
+  font-size: 11px;
+  padding: 10px;
+}
+input{
+  border: none;
+  background-color: rgba(255,255,255,0.5);
+  width:82%;
+  padding: 12px 15px;
+  border-radius: 7px;
+  box-shadow: rgba(0,0,0,0.05) 0 54px 55px,rgba(0,0,0,0.05) 0 -12px 30px,rgba(0,0,0,0.05) 0 4px 6px,rgba(0,0,0,0.05) 0 12px 3px,
+    rgba(0,0,0,0.05) 0 -3px 5px;
+    
+}
+input:focus{
+    outline: none;
+}
+.input-container{
+    position: relative;
+    width:100%;
+    max-width:650px;
+}
+.input-container #submit{
+    position: absolute;
+    right: 18px;
+    bottom: 10px;
+    cursor: pointer;
+}
+button{
+    border: solid 0.5px rgba(255,255,255,0.5);
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    transition: all ease 0.5s;
+}
+button:active{
+    transition: all ease 0.5s;
+    background-color: white;
+    color: black;
+}
+nav{
+    border-top: solid 0.5px rgba(255,255,255,0.5);
+    padding: 10px;
+    margin: 10px;
+}
+nav p{
+    font-family: "MonumentExtended-Regular";
+}
+.history{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.history p{
+    cursor: pointer;
+}
+#output{
+    width: 90%;
+    height: 100vh;
+    padding-top: 20px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+}
+#output .chat-bot-message{
+    text-align: left;
+    max-width:80%;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 6px;
+    border-radius: 7px;
+    background-color: #202123;
+    padding: 7px;
+    align-self: flex-end;
+    overflow-wrap: break-word;
+}
+#output .user-message{
+    max-width:70%;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    margin-left: 6px;
+    margin-right: 5px;
+    border-radius: 7px;
+    background-color:rgba(255,255,255,0.5);
+    padding: 7px;
+    align-self: flex-start;
+}
+.history{
+    overflow: scroll;
+}
+ @media (min-width:769px){
+   .burger{
+     visibility: hidden;
+   }
+   .hamburger{
+     visibility: hidden;
+   }
+ }
+@media (max-width:768px){
+  .burger {
+    margin-right: 25px;
+    margin-top: 10px;
+    align-self: flex-end;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin: 6px 0;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    opacity 0.3s ease;
+}
+
+#burger-checkbox {
+  display: none;
+}
+
+#burger-checkbox:checked + .burger span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#burger-checkbox:checked + .burger span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+#burger-checkbox:checked + .burger span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+.new-chat{
+    margin-top: 30px;
+}
+
+.hidden{
+    width:20vw;
+    transition: all ease 0.3s;
+}
+.show{
+    transition: all ease 0.3s;
+}
+
+/* Initial hidden state */
+/*.hide-btn {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+
+.show-btn {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 2s ease;
+}
+
+
+.hide-nav {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+
+.show-nav {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 2s ease;
+}*/
+/* Hidden state */
+.hide-btn {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease, max-width 0.2s ease;
+}
+
+/* Visible state */
+.show-btn {
+    opacity: 1;
+    max-height: 200px; /* Adjust based on the content height */
+    transition: opacity 2s ease, max-width 2s ease;
+}
+
+/* Hidden state for nav */
+.hide-nav {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease, max-height 0.2s ease;
+}
+
+/* Visible state for nav */
+.show-nav {
+    opacity: 1;
+    max-height: 500px; /* Adjust based on the content height */
+    transition: opacity 2s ease, max-height 2s ease;
+}
+    .hide-history{
+        opacity: 0;
+        transition: all ease 0.2s;
+    }
+    .show-history{
+        opacity: 1;
+        transition: all ease 2s;
+    }
+}
