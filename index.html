@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANUBIS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="side-bar hidden">
+ 
+
+<input id="burger-checkbox" class="hamburger" type="checkbox" />
+<label class="burger" for="burger-checkbox">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+
+
+        <button class="new-chat hide-btn">New Chat</button>
+        <div class="history hide-history"></div>
+        <nav class="nav hide-nav">
+            <p>Made By Ayush</p>
+        </nav>
+    </section>
+    <section class="main">
+        <!--<h1>ANUBIS</h1>-->
+        <p id="output"></p>
+        <div class="bottom-section">
+            <div class="input-container">
+                <input class="userInput" type="text" />
+                <div id="submit">➤</div>
+            </div>
+        </div>
+        <p class="info">
+         Automated Natural User Bot and Intelligent System(ANUBIS) 
+         version 1.0.0</p>
+    </section>
+    <script type="importmap">
+  {
+    "imports": {
+      "@google/generative-ai": "https://esm.run/@google/generative-ai"
+    }
+  }
+</script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
