@@ -14,7 +14,7 @@ function changeInput(value){
     inputElement.value=value;
 }
     import { GoogleGenerativeAI } from "@google/generative-ai";
-    const genAI = new GoogleGenerativeAI("AIzaSyBBWF1LnQ_539uA8nDXSFD7rGN6a921kxU");
+    const genAI = new GoogleGenerativeAI("API_KEY");
     async function run(){
         // Make sure to include these imports:
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
